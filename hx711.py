@@ -2,6 +2,7 @@
 This file holds HX711 class
 """
 #!/usr/bin/env python3
+# from https://github.com/gandalf15/HX711/blob/master/HX711_Python3/hx711.py
 
 import statistics as stat
 import time

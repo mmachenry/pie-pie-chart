@@ -72,7 +72,7 @@ def plot_reading (hx, tear_weight, full_weight):
 
 if __name__ == "__main__":
     try:
-        debug_plot()
+        main()
     except (KeyboardInterrupt, SystemExit):
         print('Bye :)')
 

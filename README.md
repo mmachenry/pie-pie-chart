@@ -8,7 +8,7 @@ weighs the amount of pie that is left. The viewing screen, juxaposed with the
 pie in question, provides immediate visual confirmation that the pie chart made
 by the original pie is accurate.
 
-![The Pie Pie Chart in action](pie_pie_chart.jpg)
+![The Pie Pie Chart in action](pie-pie-chart.jpg)
 
 <span sytle="text-align:center">Happy Pi Day!</span>
 

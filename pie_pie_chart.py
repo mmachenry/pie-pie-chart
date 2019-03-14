@@ -1,12 +1,11 @@
-#!/usr/bin/env python3
-
-import RPi.GPIO as GPIO  # import GPIO
-from hx711 import HX711  # import the class HX711
+import RPi.GPIO as GPIO
+import hx711
 import matplotlib.pyplot as plt
  
+# Read initial calibration and tear weight data then display the plot.
 def main():
     GPIO.setmode(GPIO.BCM)
-    hx = HX711(dout_pin=5, pd_sck_pin=6)
+    hx = hx711.HX711(dout_pin=5, pd_sck_pin=6)
     err = hx.zero()
     if err:
         raise ValueError('Tare is unsuccessful.')
@@ -46,6 +45,7 @@ def main():
 
     plot_reading(hx, tear_weight, full_weight)
 
+# Continually read data from the sensor, update the pie chart, and display.
 def plot_reading (hx, tear_weight, full_weight):
     while True:
         current_weight = hx.get_weight_mean(20)
@@ -53,16 +53,18 @@ def plot_reading (hx, tear_weight, full_weight):
 
         labels = ['Remaining', 'Eaten']
         sizes = [current_weight, max(0,full_weight - current_weight)]
-        colors = ['gold', 'yellowgreen']
-        explode = (0.1, 0)  # explode 1st slice
+        colors = ['sandybrown', 'grey']
+        explode = (0, 0.1)
          
-        # Plot
+        title_font = { 'color':  'blue', 'weight': 'bold', 'size': 30 }
+        label_font = { 'color':  'black', 'weight': 'normal', 'size': 20 }
+
         h = plt.pie(sizes, explode=explode, labels=labels, colors=colors,
-            autopct='%1.1f%%', shadow=True, startangle=270)
-        #hx.set(plt.findobj(h,'type','text'),'fontsize',18);
-        plt.title("Pi Day Pie Pie Chart")
-         
-        plt.axis('equal')
+            autopct='%1.1f%%', shadow=True, startangle=180,
+            textprops=label_font)
+
+        plt.title("Pi Day Pie Pie Chart", title_font)
+
         plt.plot()
         plt.draw()
         plt.pause(1)
@@ -70,7 +72,7 @@ def plot_reading (hx, tear_weight, full_weight):
 
 if __name__ == "__main__":
     try:
-        main()
+        debug_plot()
     except (KeyboardInterrupt, SystemExit):
         print('Bye :)')
 

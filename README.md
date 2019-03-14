@@ -3,8 +3,8 @@
 `pie_pie_chart.py` is a pie pie chart for Pi Day powered by the Raspberry Pi.
 
 A pie is pie chart that shows how much pie is left. To verify this, we have
-created a realtime pie measurement and reporting device which continuously
-weighs the amount of pie that is left. The viewing screen, juxaposed with the
+created a real-time pie measurement and reporting device which continuously
+weighs the amount of pie that is left. The viewing screen, juxtaposed with the
 pie in question, provides immediate visual confirmation that the pie chart made
 by the original pie is accurate.
 

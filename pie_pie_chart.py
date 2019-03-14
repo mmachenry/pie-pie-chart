@@ -40,19 +40,20 @@ def main():
     print ("Tear weight is ", tear_weight, "g")
 
     input('Put the pie on the scale for a full weight and press enter.')
-    full_weight = hx.get_weight_mean(20)
-    print ("Full weight is ", full_weight, "g")
+    total_weight = hx.get_weight_mean(20)
+    print ("Full weight is ", total_weight, "g")
 
-    plot_reading(hx, tear_weight, full_weight)
+    plot_reading(hx, tear_weight, total_weight - tear_weight)
 
 # Continually read data from the sensor, update the pie chart, and display.
 def plot_reading (hx, tear_weight, full_weight):
     while True:
         current_weight = hx.get_weight_mean(20)
+        remaining_weight = current_weight - tear_weight
         print ("Current weight is ", current_weight, "g")
 
         labels = ['Remaining', 'Eaten']
-        sizes = [current_weight, max(0,full_weight - current_weight)]
+        sizes = [remaining_weight, max(0,full_weight - remaining_weight)]
         colors = ['sandybrown', 'grey']
         explode = (0, 0.1)
          

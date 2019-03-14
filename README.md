@@ -1,5 +1,4 @@
-Pie Pie Chart
-=============
+#Pie Pie Chart
 
 `pie_pie_chart.py` is a pie pie chart for Pi Day powered by the Raspberry Pi.
 
@@ -13,7 +12,7 @@ by the original pie is accurate.
 
 Happy Pi Day!
 
-# Setup and Installation
+## Setup and Installation
 
 The project is running on a Raspberry Pi 3B+ with HX711 compatible 1kg load
 cell. The OS is Raspbian version 2018-11-13-raspbian-stretch-full and Python3

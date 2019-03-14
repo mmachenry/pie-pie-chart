@@ -8,6 +8,8 @@ weighs the amount of pie that is left. The viewing screen, juxaposed with the
 pie in question, provides immediate visual confirmation that the pie chart made
 by the original pie is accurate.
 
+![The Pie Pie Chart in action](pie-pie-chart.jpg)
+
 # Setup and Installation
 
 The project is running on a Raspberry Pi 3B+ with HX711 compatible 1kg load

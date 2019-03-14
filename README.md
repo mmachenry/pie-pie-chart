@@ -10,7 +10,7 @@ by the original pie is accurate.
 
 ![The Pie Pie Chart in action](pie-pie-chart.jpg)
 
-<div sytle="font-size:larger, text-align:center">Happy Pi Day!</span>
+<p align="center">Happy Pi Day!</span>
 
 # Setup and Installation
 

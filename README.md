@@ -1,4 +1,4 @@
-# Pie pie Chart
+# Pie Pie Chart
 
 `pie_pie_chart.py` is a pie pie chart for Pi Day powered by the Raspberry Pi.
 

@@ -107,3 +107,8 @@ bubbly. Cool on a wire rack.
 
     python3 pie_pie_chart.py
 
+## References
+
+* https://www.raspberrypi.org/downloads/raspbian/
+* https://www.tasteofhome.com/recipes/favorite-fresh-raspberry-pie/
+* https://tutorials-raspberrypi.com/digital-raspberry-pi-scale-weight-sensor-hx711/

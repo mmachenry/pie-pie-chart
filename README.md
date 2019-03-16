@@ -15,13 +15,13 @@ Happy Pi Day!
 ## Materials needed
 
 * 2 cups all-purpose flour
-* [Load Cell - 5kg](https://www.sparkfun.com/products/14729?_ga=2.24515706.1936956039.1552598453-1561457067.1552166144&_gac=1.115816180.1552174572.Cj0KCQiA5Y3kBRDwARIsAEwloL46FxiD3YNyOx13p7sVzKgmAnDuFhzwXxAw4RRtC2iJ8tYv5psYXeoaAgeIEALw_wcB)
+* [Load Cell - 5kg](https://www.sparkfun.com/products/14729?_ga=2.24515706.1936956039.1552598453-1561457067.1552166144&_gac=1.115816181.1552174572.Cj0KCQiA5Y3kBRDwARIsAEwloL46FxiD3YNyOx13p7sVzKgmAnDuFhzwXxAw4RRtC2iJ8tYv5psYXeoaAgeIEALw_wcB)
 * 1 tablespoon sugar
 * [Load Cell Amplifier - HX711](https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide/all)
 * 1/2 teaspoon salt
 * [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
 * 3/4 cup shortening
-* [10.1" LCD Screen](https://www.robotshop.com/en/1280x800-101-lcd-ips-screen-raspberry-pi.html?gclid=CjwKCAjw96fkBRA2EiwAKZjFTU8E2x6RaMLMpzV93_2UvaS4hqcBabY84NoMAyt84qUMzNkNBTGt7xoCQUUQAvD_BwE)
+* [11.1" LCD Screen](https://www.robotshop.com/en/1280x800-101-lcd-ips-screen-raspberry-pi.html?gclid=CjwKCAjw96fkBRA2EiwAKZjFTU8E2x6RaMLMpzV93_2UvaS4hqcBabY84NoMAyt84qUMzNkNBTGt7xoCQUUQAvD_BwE)
 * 1 egg, lightly beaten
 * 8GB Micro SD card
 * 3 tablespoons cold water
@@ -54,56 +54,56 @@ Happy Pi Day!
 
 ## Instructions
 
-0. In a large bowl, combine the flour, sugar and salt; cut in shortening until
+1. In a large bowl, combine the flour, sugar and salt; cut in shortening until
 mixture resembles coarse crumbs.
 
-0. Download and install Raspbian to an SD card and boot your RaspberryPi
+1. Download and install Raspbian to an SD card and boot your RaspberryPi
 following [the instructions](https://www.raspberrypi.org/downloads/raspbian/)
 on their website. This project has been tested on version
 2018-11-13-raspbian-stretch-full but most any version should work.
 
-0. Combine the egg, water and vinegar; stir into flour mixture just until
+1. Combine the egg, water and vinegar; stir into flour mixture just until
 moistened.
 
-0. Drill holls in each 8"x8" sheet to support load cell.
+1. Drill holls in each 8"x8" sheet to support load cell.
 
-0. Divide dough in half so that one ball is slightly larger than the other;
+1. Divide dough in half so that one ball is slightly larger than the other;
 wrap each in plastic wrap.
 
-0. Secure load cell between sheets separated by spacers.
+1. Secure load cell between sheets separated by spacers.
 
-0. Refrigerate (dough not load cell) for 30 minutes or until easy to handle.
+1. Refrigerate (dough not load cell) for 30 minutes or until easy to handle.
 
-0. Use the breadboard and wires to connect the HX711 load cell to the
+1. Use the breadboard and wires to connect the HX711 load cell to the
 RaspberryPi. Follow [this tutorial](https://tutorials-raspberrypi.com/digital-raspberry-pi-scale-weight-sensor-hx711/)
 and test to make sure you're getting a reading using their example script.
 
-0. Meanwhile, in another large bowl, combine the sugar, tapioca, cornstarch and
+1. Meanwhile, in another large bowl, combine the sugar, tapioca, cornstarch and
 raspberries; let stand for 15 minutes.
 
-0. Download this repository to the Raspberry Pi.
+1. Download this repository to the Raspberry Pi.
 
     git clone https://github.com/mmachenry/pie-pie-chart.git
 
-0. On a lightly floured surface, roll out larger ball of dough to fit a 9-in.
+1. On a lightly floured surface, roll out larger ball of dough to fit a 9-in.
 pie plate. Transfer dough to pie plate; trim even with edge. Add raspberry
 filling; dot with butter.
 
-0. Change working directory to the project code.
+1. Change working directory to the project code.
 
     cd pie-pie-chart/
 
-0. Roll out remaining dough to fit top of pie; place over filling. Trim, seal
+1. Roll out remaining dough to fit top of pie; place over filling. Trim, seal
 and flute edges. Cut slits in top. Brush with milk; sprinkle with sugar.
 
-0. Install dependencies.
+1. Install dependencies.
 
     pip3 install -r requirements.txt
 
-0. Bake at 350° for 50-55 minutes or until crust is golden brown and filling is
+1. Bake at 350° for 50-55 minutes or until crust is golden brown and filling is
 bubbly. Cool on a wire rack.
 
-0. Run script and place pie on scale when prompted.
+1. Run script and place pie on scale when prompted.
 
     python3 pie_pie_chart.py
 

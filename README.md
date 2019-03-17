@@ -24,7 +24,6 @@ Happy Pi Day!
 * [11.1" LCD Screen](https://www.robotshop.com/en/1280x800-101-lcd-ips-screen-raspberry-pi.html?gclid=CjwKCAjw96fkBRA2EiwAKZjFTU8E2x6RaMLMpzV93_2UvaS4hqcBabY84NoMAyt84qUMzNkNBTGt7xoCQUUQAvD_BwE)
 * 1 egg, lightly beaten
 * 8GB Micro SD card
-* 3 tablespoons cold water
 * 5 cups fresh or frozen unsweetened raspberries, thawed
 * tiny breadboard
 * 1 tablespoon white vinegar
@@ -40,6 +39,7 @@ Happy Pi Day!
 * Two 4M spacers
 * 1 tablespoon 2% milk
 * Two 5M spacers
+* 3 tablespoons cold water
 
 ## Tools needed
 

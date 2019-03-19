@@ -46,7 +46,7 @@ def calibrate_scale (hx):
 def get_tare_and_full_weight (hx):
     input('Put the pie tin on the scale for tare weight and press enter.')
     tare_weight = hx.get_weight_mean(20)
-    print ("Tear weight is ", tare_weight, "g")
+    print ("Tare weight is ", tare_weight, "g")
 
     input('Put the pie on the scale for a full weight and press enter.')
     total_weight = hx.get_weight_mean(20)

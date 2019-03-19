@@ -2,14 +2,14 @@ import RPi.GPIO as GPIO
 import hx711
 import matplotlib.pyplot as plt
  
-# Read initial calibration and tear weight data then display the plot.
+# Read initial calibration and tare weight data then display the plot.
 def main():
     GPIO.setmode(GPIO.BCM)
     hx = hx711.HX711(dout_pin=5, pd_sck_pin=6)
     zero_the_scale(hx)
     calibrate_scale(hx)
-    (tear_weight, total_weight) = get_tear_and_full_weight(hx)
-    plot_reading(hx, tear_weight, total_weight - tear_weight)
+    (tare_weight, total_weight) = get_tare_and_full_weight(hx)
+    plot_reading(hx, tare_weight, total_weight - tare_weight)
 
 # Set scale position to zero. The scale should be empty when this is run.
 def zero_the_scale(hx):
@@ -42,23 +42,23 @@ def calibrate_scale (hx):
     else:
         raise ValueError('Cannot calculate mean value.')
 
-# Prompt user and get readings for the tear weight and full pie.
-def get_tear_and_full_weight (hx):
-    input('Put the pie tin on the scale for tear weight and press enter.')
-    tear_weight = hx.get_weight_mean(20)
-    print ("Tear weight is ", tear_weight, "g")
+# Prompt user and get readings for the tare weight and full pie.
+def get_tare_and_full_weight (hx):
+    input('Put the pie tin on the scale for tare weight and press enter.')
+    tare_weight = hx.get_weight_mean(20)
+    print ("Tear weight is ", tare_weight, "g")
 
     input('Put the pie on the scale for a full weight and press enter.')
     total_weight = hx.get_weight_mean(20)
     print ("Full weight is ", total_weight, "g")
 
-    return (tear_weight, total_weight)
+    return (tare_weight, total_weight)
 
 # Continually read data from the sensor, update the pie chart, and display.
-def plot_reading (hx, tear_weight, full_weight):
+def plot_reading (hx, tare_weight, full_weight):
     while True:
         current_weight = hx.get_weight_mean(20)
-        remaining_weight = max(0,current_weight - tear_weight)
+        remaining_weight = max(0,current_weight - tare_weight)
         #print ("Current weight is ", current_weight, "g")
 
         labels = ['Remaining', 'Eaten']
